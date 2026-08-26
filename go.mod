@@ -1,6 +1,6 @@
 module github.com/ImitationOfCoder/music_platform_proto
 
-go 1.26.7
+go 1.26.5
 
 require (
 	google.golang.org/grpc v1.83.2
