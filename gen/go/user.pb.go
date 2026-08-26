@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: user.proto
 
-package user
+package music_platform
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -370,7 +370,7 @@ const file_user_proto_rawDesc = "" +
 	"\n" +
 	"CreateUser\x12\x17.user.CreateUserRequest\x1a\x18.user.CreateUserResponse\x12B\n" +
 	"\vGetUserById\x12\x18.user.GetUserByIdRequest\x1a\x19.user.GetUserByIdResponse\x12K\n" +
-	"\x0eGetUserByEmail\x12\x1b.user.GetUserByEmailRequest\x1a\x1c.user.GetUserByEmailResponseB\bZ\x06./userb\x06proto3"
+	"\x0eGetUserByEmail\x12\x1b.user.GetUserByEmailRequest\x1a\x1c.user.GetUserByEmailResponseB\x12Z\x10./music_platformb\x06proto3"
 
 var (
 	file_user_proto_rawDescOnce sync.Once

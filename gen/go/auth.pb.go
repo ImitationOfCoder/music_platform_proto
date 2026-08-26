@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: auth.proto
 
-package auth
+package music_platform
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -240,7 +240,7 @@ const file_auth_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess2z\n" +
 	"\vAuthService\x129\n" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
-	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB\bZ\x06./authb\x06proto3"
+	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB\x12Z\x10./music_platformb\x06proto3"
 
 var (
 	file_auth_proto_rawDescOnce sync.Once
