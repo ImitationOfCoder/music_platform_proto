@@ -179,7 +179,7 @@ func (x *LoginRequest) GetPassword() string {
 
 type LoginResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Success       bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
+	Token         string                 `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -214,11 +214,11 @@ func (*LoginResponse) Descriptor() ([]byte, []int) {
 	return file_auth_proto_rawDescGZIP(), []int{3}
 }
 
-func (x *LoginResponse) GetSuccess() bool {
+func (x *LoginResponse) GetToken() string {
 	if x != nil {
-		return x.Success
+		return x.Token
 	}
-	return false
+	return ""
 }
 
 var File_auth_proto protoreflect.FileDescriptor
@@ -235,9 +235,9 @@ const file_auth_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\"@\n" +
 	"\fLoginRequest\x12\x14\n" +
 	"\x05email\x18\x01 \x01(\tR\x05email\x12\x1a\n" +
-	"\bpassword\x18\x02 \x01(\tR\bpassword\")\n" +
-	"\rLoginResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccess2z\n" +
+	"\bpassword\x18\x02 \x01(\tR\bpassword\"%\n" +
+	"\rLoginResponse\x12\x14\n" +
+	"\x05token\x18\x01 \x01(\tR\x05token2z\n" +
 	"\vAuthService\x129\n" +
 	"\bRegister\x12\x15.auth.RegisterRequest\x1a\x16.auth.RegisterResponse\x120\n" +
 	"\x05Login\x12\x12.auth.LoginRequest\x1a\x13.auth.LoginResponseB\x12Z\x10./music_platformb\x06proto3"
