@@ -23,7 +23,7 @@ const (
 
 type CreateProfileRequest struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	AccountId     string                 `protobuf:"bytes,1,opt,name=account_id,json=accountId,proto3" json:"account_id,omitempty"`
+	AccountId     int64                  `protobuf:"varint,1,opt,name=account_id,json=accountId,proto3" json:"account_id,omitempty"`
 	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -59,11 +59,11 @@ func (*CreateProfileRequest) Descriptor() ([]byte, []int) {
 	return file_profile_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *CreateProfileRequest) GetAccountId() string {
+func (x *CreateProfileRequest) GetAccountId() int64 {
 	if x != nil {
 		return x.AccountId
 	}
-	return ""
+	return 0
 }
 
 func (x *CreateProfileRequest) GetName() string {
@@ -228,7 +228,7 @@ const file_profile_proto_rawDesc = "" +
 	"\rprofile.proto\x12\aprofile\"I\n" +
 	"\x14CreateProfileRequest\x12\x1d\n" +
 	"\n" +
-	"account_id\x18\x01 \x01(\tR\taccountId\x12\x12\n" +
+	"account_id\x18\x01 \x01(\x03R\taccountId\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\"1\n" +
 	"\x15CreateProfileResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\"'\n" +
