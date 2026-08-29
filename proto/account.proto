@@ -1,22 +1,22 @@
 syntax = "proto3";
 
-package auth;
+package account;
 
 option go_package = "./music_platform";
 
-service AuthService {
-  rpc Register(RegisterRequest) returns (RegisterResponse);
+service AccountService {
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc Logout(LogoutRequest) returns (LogoutResponse);
 }
 
-message RegisterRequest {
+message CreateAccountRequest {
   string name = 1;
   string email = 2;
   string password = 3;
 }
 
-message RegisterResponse {
+message CreateAccountResponse {
   bool success = 1;
 }
 
