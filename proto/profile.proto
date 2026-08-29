@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package profile;
+
+option go_package = "./music_platform";
+
+service ProfileService {
+  rpc CreateProfile(CreateProfileRequest) returns (CreateProfileResponse);
+  rpc GetProfileById(GetProfileByIdRequest) returns (GetProfileByIdResponse);
+}
+
+message CreateProfileRequest {
+  string account_id = 1;
+  string name = 2;
+}
+
+message CreateProfileResponse {
+  bool success = 1;
+}
+
+message GetProfileByIdRequest {
+  int64 id = 1;
+}
+
+message GetProfileByIdResponse {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+}
