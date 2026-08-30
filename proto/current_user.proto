@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package current_user;
+
+option go_package = "./music_platform";
+
+service CurrentUserService {
+    rpc GetCurrentUserProfile(GetCurrentUserProfileRequest) returns (GetCurrentUserProfileResponse);
+}
+
+message GetCurrentUserProfileRequest {}
+
+message GetCurrentUserProfileResponse {
+    int64 id = 1;
+    string name = 2;
+    string email = 3;
+}
