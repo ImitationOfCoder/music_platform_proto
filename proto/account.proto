@@ -5,9 +5,19 @@ package account;
 option go_package = "./music_platform";
 
 service AccountService {
+  rpc GetAccountById(GetAccountByIdRequest) returns (GetAccountByIdResponse);
   rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse);
   rpc Login(LoginRequest) returns (LoginResponse);
   rpc Logout(LogoutRequest) returns (LogoutResponse);
+}
+
+message GetAccountByIdRequest {
+  int64 id = 1;
+}
+
+message GetAccountByIdResponse {
+  int64 id = 1;
+  string email = 2;
 }
 
 message CreateAccountRequest {
