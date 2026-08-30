@@ -165,7 +165,6 @@ type GetProfileByIdResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            int64                  `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name          string                 `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	Email         string                 `protobuf:"bytes,3,opt,name=email,proto3" json:"email,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -214,13 +213,6 @@ func (x *GetProfileByIdResponse) GetName() string {
 	return ""
 }
 
-func (x *GetProfileByIdResponse) GetEmail() string {
-	if x != nil {
-		return x.Email
-	}
-	return ""
-}
-
 var File_profile_proto protoreflect.FileDescriptor
 
 const file_profile_proto_rawDesc = "" +
@@ -233,11 +225,10 @@ const file_profile_proto_rawDesc = "" +
 	"\x15CreateProfileResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\"'\n" +
 	"\x15GetProfileByIdRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\x03R\x02id\"R\n" +
+	"\x02id\x18\x01 \x01(\x03R\x02id\"<\n" +
 	"\x16GetProfileByIdResponse\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\x03R\x02id\x12\x12\n" +
-	"\x04name\x18\x02 \x01(\tR\x04name\x12\x14\n" +
-	"\x05email\x18\x03 \x01(\tR\x05email2\xb3\x01\n" +
+	"\x04name\x18\x02 \x01(\tR\x04name2\xb3\x01\n" +
 	"\x0eProfileService\x12N\n" +
 	"\rCreateProfile\x12\x1d.profile.CreateProfileRequest\x1a\x1e.profile.CreateProfileResponse\x12Q\n" +
 	"\x0eGetProfileById\x12\x1e.profile.GetProfileByIdRequest\x1a\x1f.profile.GetProfileByIdResponseB\x12Z\x10./music_platformb\x06proto3"

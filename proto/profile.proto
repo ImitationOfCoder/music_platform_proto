@@ -25,5 +25,4 @@ message GetProfileByIdRequest {
 message GetProfileByIdResponse {
   int64 id = 1;
   string name = 2;
-  string email = 3;
 }
